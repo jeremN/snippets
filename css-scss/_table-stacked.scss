@@ -1,0 +1,39 @@
+@media screen and (max-width: 767px) {
+
+  .tableStacked{
+
+    thead{
+      display: none;
+    }
+     
+    & > tbody{
+
+      & > tr{
+        margin-bottom: 1em;
+        display: block;
+
+        & > td{
+          display: block;
+          text-align: right;
+          font-size: 1em;
+          border-bottom: 1px solid $grey;
+
+          &:last-child{
+            border-bottom: 0;
+          }
+
+          &::before{
+            content: attr(data-title);
+            float: left;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    input{
+      text-align: right;
+    }
+  }
+}
